@@ -1,4 +1,3 @@
-// About.jsx
 import React from 'react';
 import { 
   FaHistory,
@@ -287,48 +286,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Achievements Section */}
-      {/* <section className="relative py-24 bg-gradient-to-br from-white via-slate-50 to-blue-50 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-100 to-blue-100 text-purple-800 font-semibold mb-6">
-              <GiAchievement className="w-5 h-5 mr-2" />
-              Our Achievements
-            </div>
-            <h2 className="text-5xl md:text-7xl font-black text-slate-800 mb-6">
-              Celebrating <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Excellence</span>
-            </h2>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { number: "95%", label: "Board Exam Results", icon: <FaChartLine className="w-8 h-8" /> },
-              { number: "50+", label: "National Awards", icon: <FaAward className="w-8 h-8" /> },
-              { number: "100+", label: "Sports Championships", icon: <GiAchievement className="w-8 h-8" /> },
-              { number: "1000+", label: "Scholarships Awarded", icon: <FaGraduationCap className="w-8 h-8" /> }
-            ].map((achievement, index) => (
-              <div 
-                key={index}
-                className="group text-center transform hover:scale-105 transition-all duration-500"
-              >
-                <div className="relative inline-block mb-6">
-                  <div className="absolute inset-0 bg-white/50 rounded-2xl blur-md group-hover:blur-lg transition-all duration-500"></div>
-                  <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-white/50 group-hover:border-purple-200">
-                    <div className="text-purple-600">
-                      {achievement.icon}
-                    </div>
-                  </div>
-                </div>
-                <div className="text-4xl font-black mb-3 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                  {achievement.number}
-                </div>
-                <div className="text-slate-600 font-semibold">{achievement.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-    </div>
   );
 };
 

@@ -1,4 +1,3 @@
-// Home.jsx - Ultra Modern Attractive Redesign
 import React, { useState, useEffect, useRef } from 'react';
 import { 
   FaGraduationCap, 
@@ -44,16 +43,14 @@ import {
   MdPhone,
   MdEmail
 } from 'react-icons/md';
-import d2 from '../assets/d2.jpeg'
-import d3 from '../assets/d3.jpeg'
-import d4 from '../assets/d4.jpeg'
-import d1 from '../assets/d1.jpeg'
-import d5 from '../assets/d5.jpeg'
-import d6 from '../assets/d6.jpeg'
-import d7 from '../assets/d7.jpeg'
-import d8 from '../assets/d8.jpeg'
-
-
+import d2 from '../assets/d2.jpeg';
+import d3 from '../assets/d3.jpeg';
+import d4 from '../assets/d4.jpeg';
+import d1 from '../assets/d1.jpeg';
+import d5 from '../assets/d5.jpeg';
+import d6 from '../assets/d6.jpeg';
+import d7 from '../assets/d7.jpeg';
+import d8 from '../assets/d8.jpeg';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -69,29 +66,19 @@ const Home = () => {
       url: d2,
       title: "World-Class Education",
       subtitle: "Excellence in Academics Since 1950",
-    //   cta: "Explore Programs",
-    //   icon: <GiGraduateCap className="w-16 h-16 mb-4" />,
-    //   gradient: "from-purple-600/90 to-blue-600/90"
     },
     {
       id: 2,
       url: d3,
       title: "Modern Infrastructure",
       subtitle: "State-of-the-Art Learning Facilities",
-    //   cta: "Take a Tour",
-    //   icon: <GiModernCity className="w-16 h-16 mb-4" />,
-    //   gradient: "from-emerald-600/90 to-teal-600/90"
     },
     {
       id: 3,
       url: d4,
       title: "Expert Faculty",
       subtitle: "Learn from the Best Educators",
-    //   cta: "Meet Our Team",
-    //   icon: <GiTeacher className="w-16 h-16 mb-4" />,
-    //   gradient: "from-amber-600/90 to-orange-600/90"
     },
-    
   ];
 
   const galleryImages = [
@@ -100,42 +87,36 @@ const Home = () => {
       url: d1,
       title: "Sports Day",
       likes: 124,
-      category: "Sports"
     },
     {
       id: 2,
       url: d5,
       title: "Science Fair",
       likes: 89,
-      category: "Science"
     },
     {
       id: 3,
       url: d6,
       title: "Cultural Event",
       likes: 156,
-      category: "Cultural"
     },
     {
       id: 4,
       url: d7,
       title: "Lab Work",
       likes: 78,
-      category: "Science"
     },
     {
       id: 5,
       url: d8,
       title: "Classroom",
       likes: 203,
-      category: "Academic"
     },
     {
       id: 6,
       url: d2,
       title: "Graduation",
       likes: 312,
-      category: "Events"
     }
   ];
 
@@ -219,14 +200,20 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 overflow-hidden font-['Poppins']">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 overflow-hidden font-['Inter']">
       {/* Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-to-br from-purple-200/20 to-pink-200/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-1/2 -left-1/2 w-full h-full bg-gradient-to-tr from-blue-200/20 to-cyan-200/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
-     
+      {/* Scroll Progress Bar */}
+      {/* <div className="fixed top-0 left-0 w-full h-1 z-50">
+        <div 
+          className="h-full bg-gradient-to-r from-purple-500 to-blue-500 transition-all duration-300"
+          style={{ width: `${scrollProgress}%` }}
+        ></div>
+      </div> */}
 
       {/* Hero Section - Ultra Modern */}
       <section className="relative h-screen overflow-hidden">
@@ -258,29 +245,34 @@ const Home = () => {
         {/* Hero Content */}
         <div className="relative z-20 h-full flex items-center justify-center px-4">
           <div className="text-center text-white max-w-6xl">
-           
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white font-medium mb-8 border border-white/30">
+              <FaGraduationCap className="w-4 h-4 mr-2" />
+              Excellence in Education Since 1950
+            </div>
             
-            <h1 className="text-6xl md:text-8xl font-black mb-6 leading-tight bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent animate-fadeIn">
-              {carouselImages[currentSlide].title.split(' ').map((word, i) => (
-                <span key={i} className="inline-block animate-slideUp" style={{animationDelay: `${i * 0.1}s`}}>
-                  {word}&nbsp;
-                </span>
-              ))}
-            </h1>
-            
-            <h1 className="text-9xl md:text-8xl font-black mb-6 leading-tight bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent animate-fadeIn">
+            <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent animate-fadeIn">
               {carouselImages[currentSlide].title}
             </h1>
-                        <p className="text-2xl md:text-3xl mb-8 font-light text-blue-100 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl mb-8 font-light text-blue-100 max-w-3xl mx-auto leading-relaxed">
               {carouselImages[currentSlide].subtitle}
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-             
-            </div>
+            
           </div>
         </div>
 
-        
+        {/* Enhanced Carousel Controls */}
+        <button 
+          onClick={prevSlide}
+          className="absolute left-6 top-1/2 transform -translate-y-1/2 z-30 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 shadow-xl"
+        >
+          <FaChevronLeft className="w-5 h-5" />
+        </button>
+        <button 
+          onClick={nextSlide}
+          className="absolute right-6 top-1/2 transform -translate-y-1/2 z-30 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 shadow-xl"
+        >
+          <FaChevronRight className="w-5 h-5" />
+        </button>
 
         {/* Enhanced Indicators */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-30">
@@ -297,7 +289,7 @@ const Home = () => {
           ))}
         </div>
 
-       
+        
       </section>
 
       {/* Stats Section - Modern Design */}
@@ -363,7 +355,6 @@ const Home = () => {
                 color: 'from-purple-500 to-purple-600',
                 bgColor: 'bg-purple-500/10',
                 features: ['JEE Preparation', 'Advanced Mathematics', 'Physics Lab'],
-                // emoji: '⚡'
               },
               {
                 title: 'Medical Sciences',
@@ -372,7 +363,6 @@ const Home = () => {
                 color: 'from-emerald-500 to-emerald-600',
                 bgColor: 'bg-emerald-500/10',
                 features: ['NEET Coaching', 'Biology Labs', 'Medical Workshops'],
-                // emoji: '🩺'
               },
               {
                 title: 'Science & Research',
@@ -381,7 +371,6 @@ const Home = () => {
                 color: 'from-blue-500 to-blue-600',
                 bgColor: 'bg-blue-500/10',
                 features: ['Research Projects', 'Science Olympiads', 'Innovation Lab'],
-                // emoji: '🔬'
               },
               {
                 title: 'Commerce & Business',
@@ -390,7 +379,6 @@ const Home = () => {
                 color: 'from-amber-500 to-amber-600',
                 bgColor: 'bg-amber-500/10',
                 features: ['CA Foundation', 'Business Studies', 'Accounting'],
-                // emoji: '💼'
               },
               {
                 title: 'Arts & Humanities',
@@ -399,7 +387,6 @@ const Home = () => {
                 color: 'from-rose-500 to-rose-600',
                 bgColor: 'bg-rose-500/10',
                 features: ['Literature', 'History', 'Political Science'],
-                // emoji: '🎨'
               },
               {
                 title: 'Sports Academy',
@@ -408,7 +395,6 @@ const Home = () => {
                 color: 'from-cyan-500 to-cyan-600',
                 bgColor: 'bg-cyan-500/10',
                 features: ['Athletics', 'Team Sports', 'Fitness Training'],
-                // emoji: '🏆'
               }
             ].map((program, index) => (
               <div 
@@ -445,7 +431,7 @@ const Home = () => {
                     ))}
                   </ul>
                   
-                
+                 
                 </div>
               </div>
             ))}
@@ -582,10 +568,10 @@ const Home = () => {
           <div className="text-center mb-20">
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-100 to-blue-100 text-purple-800 font-semibold mb-6">
               <FaCamera className="w-5 h-5 mr-2" />
-              Campus Life
+              School Life
             </div>
             <h2 className="text-5xl md:text-7xl font-black text-slate-800 mb-6">
-              Campus <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Gallery</span>
+              School <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Gallery</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto font-light">
               Glimpses of life at Don Bosco - Where memories are made and futures are shaped
@@ -603,16 +589,10 @@ const Home = () => {
                   alt={image.title}
                   className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-1000"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6">
-                  <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
-                  
-                  </div>
-                </div>
+                
               </div>
             ))}
           </div>
-
-        
         </div>
       </section>
 
