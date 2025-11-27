@@ -51,7 +51,7 @@ const Events = () => {
       title: "Cultural Fest 'Renaissance'",
       date: "2024-04-05",
       time: "9:00 AM - 8:00 PM",
-      venue: "Main Campus",
+      venue: "Main School",
       description: "A day filled with music, dance, drama, and artistic performances by our talented students.",
       detailedDescription: "Renaissance is our annual cultural extravaganza that celebrates the diverse talents of our students. The event features dance performances, musical concerts, drama plays, art exhibitions, and literary competitions. This year's theme 'Cultural Harmony' focuses on showcasing the rich diversity of Indian culture through various art forms and performances.",
       image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",

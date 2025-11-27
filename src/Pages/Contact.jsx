@@ -11,7 +11,7 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: <FaMapMarkerAlt className="w-6 h-6" />,
-      title: "Main Campus Address",
+      title: "Main School Address",
       details: [
         "Don Bosco School",
         "123 Education Street, Knowledge City, KC 12345"
@@ -171,21 +171,21 @@ const Contact = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-800 font-semibold mb-6">
               <FaMapMarkerAlt className="w-5 h-5 mr-2" />
-              Visit Our Campus
+              Visit Our School
             </div>
             <h2 className="text-5xl md:text-6xl font-black text-slate-800 mb-6">
               Our <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Location</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto font-light leading-relaxed">
-              Come visit us at our main campus. We welcome prospective students and parents for campus tours.
+              Come visit us at our main School. We welcome prospective students and parents for School tours.
             </p>
           </div>
 
           <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/50">
             <div className="text-center mb-8">
-              <h3 className="text-3xl font-black text-slate-800 mb-4">Campus Location</h3>
+              <h3 className="text-3xl font-black text-slate-800 mb-4">School Location</h3>
               <p className="text-slate-600 max-w-2xl mx-auto font-light">
-                Our campus is conveniently located in Knowledge City with easy access to all major areas
+                Our School is conveniently located in Knowledge City with easy access to all major areas
               </p>
             </div>
             
@@ -193,7 +193,7 @@ const Contact = () => {
               <div className="w-full h-64 bg-gradient-to-r from-blue-200 to-cyan-200 rounded-xl flex items-center justify-center">
                 <div className="text-center">
                   <FaMapMarkerAlt className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                  <p className="text-blue-800 font-semibold text-lg">Don Bosco School Campus</p>
+                  <p className="text-blue-800 font-semibold text-lg">Don Bosco School School</p>
                   <p className="text-blue-600 font-semibold text-md mt-2">
                     123 Education Street, Knowledge City, KC 12345
                   </p>

@@ -98,8 +98,8 @@ const Facilities = () => {
     },
     {
       icon: <FaTree className="w-8 h-8" />,
-      title: "Green Campus",
-      description: "Eco-friendly campus with lush greenery and environmental initiatives",
+      title: "Green School",
+      description: "Eco-friendly School with lush greenery and environmental initiatives",
       color: "from-green-500 to-green-600"
     },
     {
@@ -110,8 +110,8 @@ const Facilities = () => {
     },
     {
       icon: <FaWifi className="w-8 h-8" />,
-      title: "WiFi Campus",
-      description: "High-speed wireless internet connectivity across the entire campus",
+      title: "WiFi School",
+      description: "High-speed wireless internet connectivity across the entire School",
       color: "from-cyan-500 to-cyan-600"
     },
     {
@@ -289,10 +289,10 @@ const Facilities = () => {
               Additional Amenities
             </div>
             <h2 className="text-5xl md:text-7xl font-black text-slate-800 mb-6">
-              Complete <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">Campus</span>
+              Complete <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">School</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto font-light leading-relaxed">
-              Everything students need for a comfortable, safe, and enriching campus experience
+              Everything students need for a comfortable, safe, and enriching School experience
             </p>
           </div>
 
