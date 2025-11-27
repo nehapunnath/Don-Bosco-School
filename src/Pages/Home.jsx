@@ -22,27 +22,24 @@ import {
   FaHeart,
   FaLightbulb,
   FaUsers,
-  FaChartLine
+  FaChartLine,
+  FaBook,
+  FaRunning,
+  FaCalendarAlt,
+  FaChalkboardTeacher
 } from 'react-icons/fa';
 import { 
   GiTeacher,
   GiModernCity,
   GiStairsGoal,
   GiGraduateCap,
-  GiSpinningRibbons
+  GiSpinningRibbons,
+  GiChemicalTank
 } from 'react-icons/gi';
 import { 
   IoIosRocket,
   IoIosSchool
 } from 'react-icons/io';
-import { 
-  MdEngineering,
-  MdHealthAndSafety,
-  MdComputer,
-  MdLocationOn,
-  MdPhone,
-  MdEmail
-} from 'react-icons/md';
 import d2 from '../assets/d2.jpeg';
 import d3 from '../assets/d3.jpeg';
 import d4 from '../assets/d4.jpeg';
@@ -79,6 +76,37 @@ const Home = () => {
       title: "Expert Faculty",
       subtitle: "Learn from the Best Educators",
     },
+  ];
+
+  // Academic programs from Academics page (without images)
+  const programs = [
+    {
+      id: 1,
+      title: "Primary Education",
+      grade: "Grades 1-5",
+      description: "Foundational learning with focus on literacy, numeracy, and holistic development",
+      features: ["Interactive Learning", "Basic Computer Skills", "Arts & Crafts", "Physical Education"],
+      color: "from-blue-500 to-cyan-500",
+      icon: <FaBook className="w-8 h-8" />
+    },
+    {
+      id: 2,
+      title: "Middle School",
+      grade: "Grades 6-8",
+      description: "Building strong academic foundation with specialized subject teachers",
+      features: ["Science Lab", "Mathematics", "Social Studies", "Language Arts"],
+      color: "from-purple-500 to-pink-500",
+      icon: <FaGraduationCap className="w-8 h-8" />
+    },
+    {
+      id: 3,
+      title: "High School",
+      grade: "Grades 9-12",
+      description: "Comprehensive preparation for higher education and career paths",
+      features: ["Science & Commerce Streams", "College Preparation", "Career Counseling", "Advanced Placement"],
+      color: "from-green-500 to-emerald-500",
+      icon: <FaUsers className="w-8 h-8" />
+    }
   ];
 
   const galleryImages = [
@@ -207,15 +235,7 @@ const Home = () => {
         <div className="absolute -bottom-1/2 -left-1/2 w-full h-full bg-gradient-to-tr from-blue-200/20 to-cyan-200/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
-      {/* Scroll Progress Bar */}
-      {/* <div className="fixed top-0 left-0 w-full h-1 z-50">
-        <div 
-          className="h-full bg-gradient-to-r from-purple-500 to-blue-500 transition-all duration-300"
-          style={{ width: `${scrollProgress}%` }}
-        ></div>
-      </div> */}
-
-      {/* Hero Section - Ultra Modern */}
+      {/* Hero Section */}
       <section className="relative h-screen overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0">
@@ -232,15 +252,9 @@ const Home = () => {
                 alt={image.title}
                 className="w-full h-full object-cover transform scale-105"
               />
-              <div className={`absolute inset-0 bg-gradient-to-r ${image.gradient}`}></div>
             </div>
           ))}
         </div>
-
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-20 w-6 h-6 bg-yellow-400 rounded-full animate-bounce opacity-60"></div>
-        <div className="absolute top-40 right-32 w-4 h-4 bg-purple-400 rounded-full animate-bounce opacity-60 delay-300"></div>
-        <div className="absolute bottom-32 left-32 w-5 h-5 bg-cyan-400 rounded-full animate-bounce opacity-60 delay-700"></div>
 
         {/* Hero Content */}
         <div className="relative z-20 h-full flex items-center justify-center px-4">
@@ -256,11 +270,10 @@ const Home = () => {
             <p className="text-xl md:text-2xl mb-8 font-light text-blue-100 max-w-3xl mx-auto leading-relaxed">
               {carouselImages[currentSlide].subtitle}
             </p>
-            
           </div>
         </div>
 
-        {/* Enhanced Carousel Controls */}
+        {/* Carousel Controls */}
         <button 
           onClick={prevSlide}
           className="absolute left-6 top-1/2 transform -translate-y-1/2 z-30 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 shadow-xl"
@@ -274,7 +287,7 @@ const Home = () => {
           <FaChevronRight className="w-5 h-5" />
         </button>
 
-        {/* Enhanced Indicators */}
+        {/* Indicators */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-30">
           {carouselImages.map((_, index) => (
             <button
@@ -288,13 +301,10 @@ const Home = () => {
             />
           ))}
         </div>
-
-        
       </section>
 
-      {/* Stats Section - Modern Design */}
+      {/* Stats Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-blue-900 text-white overflow-hidden">
-        {/* Animated Background */}
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -325,9 +335,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Enhanced Academic Programs Section */}
+      {/* Academic Programs Section */}
       <section ref={programsRef} className="relative py-24 bg-transparent overflow-hidden">
-        {/* Background Elements */}
         <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-white/50 to-transparent"></div>
         
         <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -341,64 +350,15 @@ const Home = () => {
               Our <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Programs</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto font-light leading-relaxed">
-              Comprehensive educational pathways designed for success in competitive fields with cutting-edge curriculum
+              Comprehensive educational pathways designed for success with cutting-edge curriculum
             </p>
           </div>
 
           {/* Programs Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Engineering Foundation',
-                icon: <MdEngineering className="w-12 h-12" />,
-                description: 'Comprehensive preparation for JEE, BITSAT, and state engineering entrance exams with expert guidance',
-                color: 'from-purple-500 to-purple-600',
-                bgColor: 'bg-purple-500/10',
-                features: ['JEE Preparation', 'Advanced Mathematics', 'Physics Lab'],
-              },
-              {
-                title: 'Medical Sciences',
-                icon: <MdHealthAndSafety className="w-12 h-12" />,
-                description: 'NEET-focused curriculum with advanced medical science training and practical exposure',
-                color: 'from-emerald-500 to-emerald-600',
-                bgColor: 'bg-emerald-500/10',
-                features: ['NEET Coaching', 'Biology Labs', 'Medical Workshops'],
-              },
-              {
-                title: 'Science & Research',
-                icon: <FaMicroscope className="w-12 h-12" />,
-                description: 'Advanced research programs and scientific innovation courses for budding scientists',
-                color: 'from-blue-500 to-blue-600',
-                bgColor: 'bg-blue-500/10',
-                features: ['Research Projects', 'Science Olympiads', 'Innovation Lab'],
-              },
-              {
-                title: 'Commerce & Business',
-                icon: <FaBriefcase className="w-12 h-12" />,
-                description: 'CA, CS, and business management foundation programs with industry interface',
-                color: 'from-amber-500 to-amber-600',
-                bgColor: 'bg-amber-500/10',
-                features: ['CA Foundation', 'Business Studies', 'Accounting'],
-              },
-              {
-                title: 'Arts & Humanities',
-                icon: <FaBookOpen className="w-12 h-12" />,
-                description: 'Creative arts, literature, and social sciences programs fostering critical thinking',
-                color: 'from-rose-500 to-rose-600',
-                bgColor: 'bg-rose-500/10',
-                features: ['Literature', 'History', 'Political Science'],
-              },
-              {
-                title: 'Sports Academy',
-                icon: <FaMedal className="w-12 h-12" />,
-                description: 'Professional sports training combined with academic excellence programs',
-                color: 'from-cyan-500 to-cyan-600',
-                bgColor: 'bg-cyan-500/10',
-                features: ['Athletics', 'Team Sports', 'Fitness Training'],
-              }
-            ].map((program, index) => (
+            {programs.map((program, index) => (
               <div 
-                key={index}
+                key={program.id}
                 className="group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl hover:shadow-3xl transform hover:-translate-y-4 transition-all duration-700 border border-white/50 overflow-hidden"
                 onMouseEnter={() => setActiveProgram(index)}
               >
@@ -417,6 +377,8 @@ const Home = () => {
                     {program.title}
                   </h3>
                   
+                  <p className="text-blue-600 font-semibold mb-4">{program.grade}</p>
+                  
                   <p className="text-slate-600 leading-relaxed mb-6 font-light">
                     {program.description}
                   </p>
@@ -430,8 +392,6 @@ const Home = () => {
                       </li>
                     ))}
                   </ul>
-                  
-                 
                 </div>
               </div>
             ))}
@@ -439,7 +399,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Enhanced Mission & Vision Section */}
+         {/* Enhanced Mission & Vision Section */}
       <section className="relative py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50 overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0">
@@ -503,9 +463,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Enhanced Testimonials Section */}
+      {/* Testimonials Section */}
       <section className="relative py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-blue-900 overflow-hidden">
-        {/* Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
@@ -562,7 +521,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Enhanced Gallery Section */}
+      {/* Gallery Section */}
       <section className="relative py-24 bg-gradient-to-br from-white via-slate-50 to-blue-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-20">
@@ -589,14 +548,11 @@ const Home = () => {
                   alt={image.title}
                   className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-1000"
                 />
-                
               </div>
             ))}
           </div>
         </div>
       </section>
-
-      
     </div>
   );
 };
